@@ -1,0 +1,16 @@
+name: "dependent job"
+
+on : [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "testing dependt"
+        run: echo "this is build job"
+  test:
+    needs : build
+    runs-on : ubuntu-latest
+    steps:
+      - name: "testing test"
+        run: echo "this is test"
+      
