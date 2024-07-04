@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: " trigger even issue comes"
-        runs: echo " this event is trigger"
+        run: echo " this event is trigger"
   
