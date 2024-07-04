@@ -2,7 +2,7 @@ name: "on push"
 on:
   push:
     branches:
-      - main
+      - master
       - test
 jobs:
   show-info:
