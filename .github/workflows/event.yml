@@ -1,4 +1,9 @@
 name: "on push"
+on:
+  push:
+    branches:
+      - main
+      - test
 jobs:
   show-info:
     runs-on: ubuntu-latest
