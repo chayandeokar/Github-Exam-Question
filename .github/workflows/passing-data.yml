@@ -1,0 +1,30 @@
+name: "passing-data"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  jobs1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: passing data
+        run: echo " hello this is demo " > data1.txt
+      - name: upload data to artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: upload data artifacts
+          path: data.txt
+  jobs2:
+    needs: jobs1
+    runs-on: ubuntu-latest
+    steps:
+      - name: download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: download artifacts
+          path: /data
+      - name: display content
+        run: cat data/data.txt
+    
+        
