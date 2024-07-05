@@ -1,4 +1,4 @@
-sname: variables
+name: variables
 on:
   push:
     branches:
