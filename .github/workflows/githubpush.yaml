@@ -2,7 +2,7 @@ name: "git push to repo"
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   push-to-ghcr:
