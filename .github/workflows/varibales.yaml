@@ -1,0 +1,17 @@
+name: variables
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  variables:
+    runs-on: ubuntu-latest
+    env:
+      APP_MODE: $ {{ var.APP_MODE }}
+
+    steps:
+      - name: Display env
+        run: echo "this is $APP_MODE"
+  
+ 
