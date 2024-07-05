@@ -1,0 +1,15 @@
+name: variables
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display env
+        run: |
+          echo "this is $GITHUB_REPOSITORY" 
+          echo "Action: $GITHUB_ACTION"
+  
