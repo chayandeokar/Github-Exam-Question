@@ -1,4 +1,4 @@
-name: variables
+sname: variables
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ jobs:
   variables:
     runs-on: ubuntu-latest
     env:
-      APP_MODE: $ {{ var.APP_MODE }}
+      APP_MODE: ${{ vars.APP_MODE }}
 
     steps:
       - name: Display env
