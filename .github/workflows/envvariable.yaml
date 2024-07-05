@@ -1,0 +1,14 @@
+name : Default variables Example
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    env:
+      MY_VARIBALE: " Hello from ENV"
+    steps:
+      - name: Display Dafualt
+        run: echo " this is $MY_VARIBALE"
